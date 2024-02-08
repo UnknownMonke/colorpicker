@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Color Picker</title>
+        <link rel="icon" type="image/x-icon" href="clpk-icon.png">
+        <link rel="stylesheet" type="text/css" href="clpk.css">
+    </head>
+    <body>
+        <div class="clpk-content">
+
+            <div id="clpk-wrapper-sat" class="clpk-event clpk-wrapper-24">
+                <div id="clpk-selector-sat">
+                
+                    <div id="clpk-pointer-sat" class="clpk-pointer">
+                        <div class="clpk-shape"></div>
+                    </div>
+                    <div id="clpk-bg-sat" class="clpk-bg"></div>
+                    <div id="clpk-bg-sat-black" class="clpk-bg"></div>
+                    <div id="clpk-bg-sat-white" class="clpk-bg"></div>
+                </div>
+            </div>
+
+            <div class="clpk-values clpk-wrapper-12">
+                <div class="clpk-title clpk-text">Color codes</div>
+
+                <div class="clpk-inputs">
+                    
+                    <div class="clpk-input-group">
+                        <input id="clpk-input-hex" type="text" maxlength="9">
+                        <label for="clpk-input-hex" class="clpk-text">Hex</label>
+                    </div>
+
+                    <div class="clpk-colors">
+                        <div class="clpk-input-group">
+                            <input id="clpk-input-red" type="text" maxlength="3">
+                            <label for="clpk-input-red" class="clpk-text">R</label>
+                        </div>
+
+                        <div class="clpk-input-group">
+                            <input id="clpk-input-green" type="text" maxlength="3">
+                            <label for="clpk-input-green" class="clpk-text">G</label>
+                        </div>
+
+                        <div class="clpk-input-group">
+                            <input id="clpk-input-blue" type="text" maxlength="3">
+                            <label for="clpk-input-blue" class="clpk-text">B</label>
+                        </div>
+
+                        <div class="clpk-input-group">
+                            <input id="clpk-input-alpha" type="text" maxlength="3">
+                            <label for="clpk-input-alpha" class="clpk-text">A</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="clpk-wrapper-hue" class="clpk-event clpk-wrapper-12">
+                <div id="clpk-selector-hue" class="clpk-x-select">
+
+                    <div id="clpk-pointer-hue" class="clpk-pointer">
+                        <div class="clpk-shape"></div>
+                    </div>
+                    <div id="clpk-bg-hue" class="clpk-bg"></div>
+                </div>
+            </div>
+            
+            <div id="clpk-wrapper-alpha" class="clpk-event clpk-wrapper-12">
+                <div id="clpk-selector-alpha" class="clpk-x-select">
+
+                    <div id="clpk-pointer-alpha" class="clpk-pointer">
+                        <div class="clpk-shape"></div>
+                    </div>
+                    <div id="clpk-bg-alpha" class="clpk-bg"></div>
+                    <div id="clpk-bg-alpha-transparent" class="clpk-bg"></div>
+                </div>
+            </div>
+            
+            <div id="clpk-preview" class="clpk-wrapper-24">
+                <div class="clpk-title clpk-text">Preview</div>
+                <div id="clpk-bg-preview"></div>
+            </div>
+        </div>
+
+        <script src="clpk.js" type="text/javascript"></script>
+    </body>
+</html>

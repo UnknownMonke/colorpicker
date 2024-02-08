@@ -1,0 +1,204 @@
+:root {
+  --clpk-bg: #d2f3ff77;
+  --clpk-content-bg: #ffffff;
+  --clpk-border-radius: 6px;
+  --clpk-border: 1px solid #dfe1e6;
+  --clpk-text-color: #8a8d92;
+  --clpk-input-color: #1F2667;
+  --clpk-input-border: 1px solid #bbbfc5;
+  --clpk-input-border-f: 1px solid var(--clpk-input-color);
+  --clpk-input-box-sdw: 0 0 0px 1.5px var(--clpk-input-color);
+  --clpk-sat-bg-white: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
+  --clpk-sat-bg-black: linear-gradient(to bottom, transparent 0%, #000 100%);
+  --clpk-shape-bg: #ffff;
+  --clpk-shape-border: 2px solid #44468d;
+  --clpk-hue-bg: linear-gradient(to right, red 0%, #ff0 17%, lime 33%, cyan 50%, blue 66%, #f0f 83%, red 100%);
+  --clpk-alpha-bg-transparent: linear-gradient(45deg, #ccc 25%, transparent 25%),linear-gradient(-45deg, #ccc 25%, transparent 25%),linear-gradient(45deg, transparent 75%, #ccc 75%),linear-gradient(-45deg, transparent 75%, #ccc 75%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clpk-bg);
+  font-family: "Work Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.clpk-text {
+  font-weight: 600;
+  color: var(--clpk-text-color);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.clpk-pointer {
+  position: absolute;
+  z-index: 3;
+}
+.clpk-pointer .clpk-shape {
+  position: absolute;
+  border: var(--clpk-shape-border);
+  box-sizing: border-box;
+  background-color: var(--clpk-shape-bg);
+}
+
+.clpk-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--clpk-border-radius);
+}
+
+.clpk-event > div {
+  pointer-events: none;
+}
+
+.clpk-wrapper-12 {
+  padding: 12px 24px;
+}
+
+.clpk-wrapper-24 {
+  padding: 24px;
+}
+
+#clpk-pointer-sat {
+  left: 50%;
+}
+
+#clpk-pointer-hue {
+  left: 50%;
+}
+
+#clpk-pointer-alpha {
+  left: 0;
+}
+
+.clpk-content {
+  background-color: var(--clpk-content-bg);
+  border-radius: var(--clpk-border-radius);
+  border: var(--clpk-border);
+  display: flex;
+  flex-direction: column;
+}
+.clpk-content #clpk-selector-sat {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+}
+.clpk-content #clpk-selector-sat .clpk-shape {
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 50%;
+}
+.clpk-content #clpk-selector-sat #clpk-bg-sat-black {
+  z-index: 1;
+  background: var(--clpk-sat-bg-black);
+}
+.clpk-content #clpk-selector-sat #clpk-bg-sat-white {
+  z-index: 0;
+  background: var(--clpk-sat-bg-white);
+}
+.clpk-content .clpk-x-select {
+  position: relative;
+  height: 40px;
+}
+.clpk-content .clpk-x-select .clpk-shape {
+  width: 12px;
+  height: 46px;
+  margin-left: -6px;
+  margin-top: -3px;
+  border-radius: var(--clpk-border-radius);
+}
+.clpk-content .clpk-x-select #clpk-bg-hue {
+  background: var(--clpk-hue-bg);
+}
+.clpk-content .clpk-x-select #clpk-bg-alpha {
+  z-index: 1;
+}
+.clpk-content .clpk-x-select #clpk-bg-alpha-transparent {
+  z-index: 0;
+  background-image: var(--clpk-alpha-bg-transparent);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+.clpk-content .clpk-values {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+.clpk-content .clpk-values .clpk-title {
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+.clpk-content .clpk-values .clpk-inputs {
+  display: inline-flex;
+  width: 100%;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-colors {
+  display: inline-flex;
+  width: 100%;
+  margin-left: 24px;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-colors .clpk-input-group {
+  margin-left: 8px;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-input-group input {
+  width: 48px;
+  height: 42px;
+  padding: 0 8px;
+  border: var(--clpk-input-border);
+  border-radius: var(--clpk-border-radius);
+  color: var(--clpk-input-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  font-family: inherit;
+  transition: all 175ms ease-out;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-input-group input:focus {
+  outline: none;
+  border: var(--clpk-input-border-f);
+  box-shadow: var(--clpk-input-box-sdw);
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-input-group label {
+  margin-top: 0.5em;
+  font-size: 0.8rem;
+}
+.clpk-content .clpk-values .clpk-inputs .clpk-input-group #clpk-input-hex {
+  width: 100px;
+  letter-spacing: 0.05em;
+}
+.clpk-content #clpk-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+}
+.clpk-content #clpk-preview .clpk-title {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+.clpk-content #clpk-preview #clpk-bg-preview {
+  height: 100px;
+  width: 100px;
+  border: var(--clpk-border);
+  border-radius: var(--clpk-border-radius);
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=clpk.css.map */
