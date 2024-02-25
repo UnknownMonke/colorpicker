@@ -27,7 +27,7 @@
      *      - Alpha input.
      *      - Hex input.
      * 
-     * Slider changes are on mousedown and mousemove (dragging).
+     * Slider changes are set on mousedown and mousemove (dragging).
      * 
      * Only event listeners are used to avoid exposing javascript in the html and polluting the window with global functions.
      */
@@ -102,7 +102,7 @@
     // -------------------------------------------------------------------- //
 
     function slider_change_hue(target, pos_raw) {
-        const slider_val = drag(pos_raw, target.offsetWidth, target.offsetLeft); // Gets mouse relative value from 0 to 100%.
+        const slider_val = drag(pos_raw, target.offsetWidth, target.offsetLeft); // Gets mouse relative position from 0 to 100%.
         
         state.hsv.h = slider_val * 360 / 100; // Updates hue value on the fly. Scales from 0 to 360.
         state.rgb = hsv_to_rgb(state.hsv); // Updates rgb values with full hsv values.
@@ -367,10 +367,10 @@
     /**
      * Converts a hex string to rgba.
      * 
-     * The string is matched to validate a valid hexadecimal string in the form `"#{2}{2}{2}"` or `"#{2}{2}{2}{2}"`,
-     * where `"{2}""` are 2 characters between in `[0-9]` or `[a-f]`.
+     * If a value for the alpha channel is present, the string has a 4th tuple.
      * 
-     * If a value for the alpha channel is present, the strings has a 4th tuple.
+     * The string is matched to validate a valid hexadecimal string in the form `"#{2}{2}{2}"` or `"#{2}{2}{2}{2}"`,
+     * where `"{2}"` are 2 characters between in `[0-9]` or `[a-fA-F]`. No `"0x"` prefix or shortened syntax.
      * 
      * ---
      * 
@@ -450,6 +450,6 @@
     */
 
     function expect(result, expectation) {
-        console.log(result === expectation ? "✓" : "X", result, expectation)
+        console.log(result === expectation ? "✓" : "X", result, expectation);
     }
 })(this);
