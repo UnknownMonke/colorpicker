@@ -20,7 +20,7 @@
  * - A subscriber can subscribe to multiple events at once, but with the same callback.
  * - An event can have multiple callbacks registered.
  */
-class PubSub {
+export default class PubSub {
 
     constructor() {
         this.events = {};

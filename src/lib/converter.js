@@ -176,7 +176,7 @@ function expect(result, expectation) {
 
 // -------------------------------------------------------------------- //
 
-converter = {
+export const converter = {
     rgb_to_hsv,
     hsv_to_rgb,
     rgba_to_hex,

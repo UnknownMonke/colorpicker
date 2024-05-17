@@ -1,3 +1,5 @@
+import PubSub from './pubsub';
+
 /**
  * Central object of the application for state management.
  * 
@@ -17,7 +19,7 @@
  * Actions & mutations functions can be defined beforehand in a specific file, and passed as parameter of the contructor,
  * as well as the initial value of the state.
  */
-class Store {
+export default class Store {
 
     constructor(params) {
         const self = this;
