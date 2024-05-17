@@ -1,5 +1,5 @@
-import { converter } from './lib/converter';
-import { store } from './lib/state';
+import { converter } from './lib/converter.js';
+import { store } from './lib/state.js';
 
 // ==================================================================== //
 //                              Listeners                               //
@@ -7,13 +7,13 @@ import { store } from './lib/state';
 
 // ----------------------------- On Load ------------------------------ //
 
-global.addEventListener('load', () => init_state({ s: 50, v: 0, h: 50, a: 0 }));
+window.addEventListener('load', () => init_state({ s: 50, v: 0, h: 50, a: 0 }));
 
 // -------------------------------------------------------------------- //
 
 // -------------------------- Sliders change -------------------------- //
 
-global.addEventListener('mousedown', (e) => {
+window.addEventListener('mousedown', (e) => {
     const code = e.target.dataset.code;
 
     if (code) {
@@ -22,7 +22,7 @@ global.addEventListener('mousedown', (e) => {
     }
 });
 
-global.addEventListener('mousemove', (e) => {
+window.addEventListener('mousemove', (e) => {
     const code = store.state.dragging;
 
     if (code !== '') {
@@ -30,7 +30,7 @@ global.addEventListener('mousemove', (e) => {
     }
 });
 
-global.addEventListener('mouseup', () => store.dispatch('set_dragging', ''));
+window.addEventListener('mouseup', () => store.dispatch('set_dragging', ''));
 
 // -------------------------------------------------------------------- //
 

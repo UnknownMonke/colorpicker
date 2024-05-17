@@ -151,31 +151,6 @@ const hex_to_rgb_2 = hex =>
 
 // -------------------------------------------------------------------- //
 
-/*
-// RGBA with Alpha value
-expect(rgba_to_hex("rgba(255, 255, 255, 0)"), "#ffffff00")
-expect(rgba_to_hex("rgba(0, 0, 0, 0)"), "#00000000")
-expect(rgba_to_hex("rgba(124, 255, 3, 0.5)"), "#7cff0380")
-expect(rgba_to_hex("rgba(124, 255, 3, 1)"), "#7cff03ff")
-
-// RGB value 
-expect(rgba_to_hex("rgba(255, 255, 255)"), "#ffffff")
-expect(rgba_to_hex("rgba(0, 0, 0)"), "#000000")
-expect(rgba_to_hex("rgba(124, 255, 3)"), "#7cff03")
-
-// RGBA without Alpha value
-expect(rgba_to_hex("rgba(255, 255, 255, 0)", true), "#ffffff")
-expect(rgba_to_hex("rgba(0, 0, 0, 0)", true), "#000000")
-expect(rgba_to_hex("rgba(124, 255, 3, 0.5)", true), "#7cff03")
-expect(rgba_to_hex("rgba(124, 255, 3, 1)", true), "#7cff03")
-*/
-
-function expect(result, expectation) {
-    console.log(result === expectation ? "✓" : "X", result, expectation);
-}
-
-// -------------------------------------------------------------------- //
-
 export const converter = {
     rgb_to_hsv,
     hsv_to_rgb,

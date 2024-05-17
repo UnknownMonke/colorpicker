@@ -1,4 +1,4 @@
-import PubSub from './pubsub';
+import PubSub from './pubsub.js';
 
 /**
  * Central object of the application for state management.
