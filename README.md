@@ -2,8 +2,6 @@
 
 Simple HSV color picker in HTML.
 
-<br>
-
 - **V 1.0.0**
 
     - Update of DOM elements is done declaratively in a single js file.
@@ -19,3 +17,12 @@ Simple HSV color picker in HTML.
 
         - Webpack config is specified as a COmmonJS module (`.cjs` extension).
         - Module imports have their extension specified when importing.
+
+
+## State & Interactions
+
+The following graph modelizes the component's state management system.
+<br>
+All state variables are shown with their subscriptions and all actions towards a change in the state.
+
+<img src="interactions_graph.png" alt="drawing" width="1000"/>

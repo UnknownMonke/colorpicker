@@ -4,7 +4,6 @@ import Store from './store.js';
 //                           State management                           //
 // ==================================================================== //
 
-//TODO flowcharts & interactions.
 /**
  * Actions that modify the state :
  * 
